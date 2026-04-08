@@ -16,21 +16,41 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/logo-viajando-com-sthefanny.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page">
     <header class="header">
       <div class="container nav">
         <a href="#inicio" class="brand">
           <img src="/logo-viajando-com-sthefanny.png" alt="Logo Viajando com Sthefanny" />
         </a>
-        <nav>
-          <a href="#servicos">Serviços</a>
-          <a href="#passeios">Passeios</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#grupo-oficial">Grupo</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#contato" class="btn btn-sm">Falar no WhatsApp</a>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menu de navegação"
+        >
+          <span class="nav-toggle-box" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <div class="site-nav-links">
+            <a href="#servicos">Serviços</a>
+            <a href="#passeios">Passeios</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#grupo-oficial">Grupo</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#contato" class="btn btn-sm nav-cta">Falar no WhatsApp</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -38,10 +58,10 @@
     <main id="inicio">
       <section class="hero">
         <div class="container hero-grid">
-          <div>
+          <div class="hero-copy reveal">
             <span class="tag">Sua próxima viagem começa aqui</span>
-            <h1>Viajando com Sthefanny</h1>
-            <p>
+            <h1 class="hero-title">Viajando com Sthefanny</h1>
+            <p class="hero-lead">
               Planejamento completo para você viajar sem preocupação: excursões, bate e volta,
               pacotes aéreos, hospedagem e roteiros feitos sob medida para o seu estilo.
             </p>
@@ -55,55 +75,71 @@
               <li>Suporte do início ao fim</li>
             </ul>
           </div>
-          <div class="hero-card">
+          <div class="hero-card reveal reveal-delay-1">
+            <div class="hero-card-frame" aria-hidden="true"></div>
             <img src="/logo-viajando-com-sthefanny.png" alt="Identidade da Viajando com Sthefanny" />
+          </div>
+        </div>
+        <div class="hero-trust" aria-label="Credenciais">
+          <div class="container hero-trust-inner">
+            <span class="trust-chip">
+              <span class="trust-chip-mark">Cadastur</span> Agência de Turismo
+            </span>
+            <span class="trust-chip"><span class="trust-chip-mark">CNPJ</span> 61.096.837/0001-70</span>
+            <span class="trust-chip">Consultoria antes, durante e depois da viagem</span>
           </div>
         </div>
       </section>
 
-      <section id="servicos" class="section">
+      <section id="servicos" class="section section-premium">
         <div class="container">
-          <h2>Serviços em destaque</h2>
-          <p class="section-intro">
-            Tudo o que você precisa para uma viagem tranquila, segura e inesquecível.
-          </p>
-          <div class="cards">
-            <article class="card">
-              <h3>Excursões</h3>
-              <p>
-                Viagens em grupo com roteiros organizados, conforto no deslocamento e
-                acompanhamento em cada etapa.
-              </p>
+          <div class="section-head reveal">
+            <p class="eyebrow">Experiências sob medida</p>
+            <h2>Serviços em destaque</h2>
+            <p class="section-intro">
+              Tudo o que você precisa para uma viagem tranquila, segura e inesquecível.
+            </p>
+          </div>
+          <div class="cards cards-bento">
+            <article class="card card-feature reveal">
+              <span class="card-icon" aria-hidden="true">✦</span>
+              <div class="card-feature-body">
+                <h3>Excursões</h3>
+                <p>
+                  Viagens em grupo com roteiros organizados, conforto no deslocamento e
+                  acompanhamento em cada etapa.
+                </p>
+              </div>
             </article>
-            <article class="card">
+            <article class="card reveal">
               <h3>Bate e Volta</h3>
               <p>
                 Passeios rápidos para curtir destinos incríveis no mesmo dia, ideais para quem
                 quer descansar sem planejamento complexo.
               </p>
             </article>
-            <article class="card">
+            <article class="card reveal">
               <h3>Pacotes Aéreos</h3>
               <p>
                 Combinações de voo + hospedagem com ótimo custo-benefício, para viagens nacionais e
                 internacionais.
               </p>
             </article>
-            <article class="card">
+            <article class="card reveal">
               <h3>Hospedagem</h3>
               <p>
                 Seleção de hotéis e pousadas de acordo com o seu perfil e orçamento, com foco em
                 conforto e localização.
               </p>
             </article>
-            <article class="card">
+            <article class="card reveal">
               <h3>Roteiro Personalizado</h3>
               <p>
                 Montagem de roteiro conforme seus objetivos, ritmo e preferências, aproveitando cada
                 dia da viagem.
               </p>
             </article>
-            <article class="card">
+            <article class="card reveal">
               <h3>Consultoria de Viagem</h3>
               <p>
                 Orientação completa para documentação, seguro, bagagem e melhores opções para seu
@@ -114,15 +150,18 @@
         </div>
       </section>
 
-      <section id="passeios" class="section section-alt">
+      <section id="passeios" class="section section-alt section-premium">
         <div class="container">
-          <h2>Passeios</h2>
-          <p class="section-intro">
-            Ordem cronológica por data. Confira valores e o que está incluso em cada experiência.
-            Valores e condições podem ser confirmados diretamente com a agência.
-          </p>
+          <div class="section-head reveal">
+            <p class="eyebrow">Datas e valores</p>
+            <h2>Passeios</h2>
+            <p class="section-intro">
+              Ordem cronológica por data. Confira valores e o que está incluso em cada experiência.
+              Valores e condições podem ser confirmados diretamente com a agência.
+            </p>
+          </div>
           <div class="passeios-grid">
-            <article class="passeio-card" id="passeio-bali-parque">
+            <article class="passeio-card reveal" id="passeio-bali-parque">
               <div class="passeio-banner">
                 <img
                   src="/passeio-bali-parque.png"
@@ -164,7 +203,7 @@
               </div>
             </article>
 
-            <article class="passeio-card" id="passeio-loquinhas">
+            <article class="passeio-card reveal" id="passeio-loquinhas">
               <div class="passeio-banner">
                 <img
                   src="/passeio-loquinhas-chapada.png"
@@ -202,7 +241,7 @@
               </div>
             </article>
 
-            <article class="passeio-card" id="passeio-caldas-novas">
+            <article class="passeio-card reveal" id="passeio-caldas-novas">
               <div class="passeio-banner">
                 <img
                   src="/passeio-caldas-novas.png"
@@ -246,7 +285,7 @@
               </div>
             </article>
 
-            <article class="passeio-card" id="passeio-salto-corumba">
+            <article class="passeio-card reveal" id="passeio-salto-corumba">
               <div class="passeio-banner">
                 <img
                   src="/passeio-salto-corumba.png"
@@ -288,7 +327,7 @@
               </div>
             </article>
 
-            <article class="passeio-card" id="passeio-hotel-fazenda">
+            <article class="passeio-card reveal" id="passeio-hotel-fazenda">
               <div class="passeio-banner">
                 <img
                   src="/passeio-hotel-fazenda-aguas-emendadas.png"
@@ -325,9 +364,10 @@
         </div>
       </section>
 
-      <section id="sobre" class="section">
-        <div class="container split">
-          <div>
+      <section id="sobre" class="section section-premium">
+        <div class="container split split-premium">
+          <div class="reveal">
+            <p class="eyebrow eyebrow-dark">Quem somos</p>
             <h2>Sobre a agência</h2>
             <p>
               A <strong>Viajando com Sthefanny</strong> nasceu para transformar sonhos em memórias
@@ -339,7 +379,7 @@
               entende o que realmente importa: viver experiências incríveis sem dor de cabeça.
             </p>
           </div>
-          <aside class="box">
+          <aside class="box box-premium reveal">
             <h3>Por que escolher a Viajando com Sthefanny?</h3>
             <ul>
               <li>Curadoria de destinos e fornecedores confiáveis</li>
@@ -351,9 +391,10 @@
         </div>
       </section>
 
-      <section id="grupo-oficial" class="section grupo-oficial">
-        <div class="container grupo-card">
+      <section id="grupo-oficial" class="section grupo-oficial section-premium">
+        <div class="container grupo-card grupo-card-premium reveal">
           <div class="grupo-copy">
+            <p class="eyebrow eyebrow-green">Comunidade</p>
             <h2>Grupo oficial no WhatsApp</h2>
             <p>
               Entre no grupo <strong>Viajando com Sthefanny</strong> para receber promoções, novidades dos
@@ -370,14 +411,17 @@
         </div>
       </section>
 
-      <section id="depoimentos" class="section section-alt">
+      <section id="depoimentos" class="section section-alt section-premium">
         <div class="container">
-          <h2>Depoimentos</h2>
-          <p class="section-intro">
-            Feedback real de clientes — prints das conversas no WhatsApp.
-          </p>
+          <div class="section-head reveal">
+            <p class="eyebrow">Confiança</p>
+            <h2>Depoimentos</h2>
+            <p class="section-intro">
+              Feedback real de clientes — prints das conversas no WhatsApp.
+            </p>
+          </div>
           <div class="feedback-grid">
-            <figure class="feedback-item">
+            <figure class="feedback-item feedback-premium reveal">
               <img
                 src="/feedback-angela-rodrigues.png"
                 alt="Depoimento de Ângela Rodrigues no WhatsApp: agradecimento pela atenção, organização completa da viagem e consultoria antes, durante e depois."
@@ -385,7 +429,7 @@
               />
               <figcaption>Ângela Rodrigues</figcaption>
             </figure>
-            <figure class="feedback-item">
+            <figure class="feedback-item feedback-premium reveal">
               <img
                 src="/feedback-claudia.png"
                 alt="Depoimento da Claudia no WhatsApp: elogio ao carinho da equipe na viagem."
@@ -393,7 +437,7 @@
               />
               <figcaption>Claudia</figcaption>
             </figure>
-            <figure class="feedback-item">
+            <figure class="feedback-item feedback-premium reveal">
               <img
                 src="/feedback-grupo-clientes.png"
                 alt="Mensagens de clientes no grupo do WhatsApp: voucher pronto, elogios à atenção e profissionalismo."
@@ -405,24 +449,28 @@
         </div>
       </section>
 
-      <section id="contato" class="section cta">
+      <section id="contato" class="section cta cta-premium">
         <div class="container cta-box">
-          <h2>Pronta para planejar sua próxima viagem?</h2>
-          <p>
-            Fale agora com a Viajando com Sthefanny e receba um orçamento personalizado.
-          </p>
-          <a class="btn btn-lg" href="https://wa.me/5561993784630?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20viagem!" target="_blank" rel="noopener noreferrer">
-            Chamar no WhatsApp
-          </a>
-          <p>
-            Instagram: <a href="https://www.instagram.com/viajando_com_sthefanny?igsh=MXdqYjVkMGV1NWR2dw==" target="_blank" rel="noopener noreferrer">@viajando_com_sthefanny</a>
-          </p>
-          <p class="cta-extra">
-            Grupo oficial:
-            <a href="https://chat.whatsapp.com/FhCzahZclBd5SIrZJBZsXe" target="_blank" rel="noopener noreferrer"
-              >Viajando com Sthefanny no WhatsApp</a
-            >
-          </p>
+          <div class="cta-glass reveal">
+            <p class="eyebrow eyebrow-light">Próximo passo</p>
+            <h2>Pronta para planejar sua próxima viagem?</h2>
+            <p class="cta-lead">
+              Fale agora com a Viajando com Sthefanny e receba um orçamento personalizado.
+            </p>
+            <a class="btn btn-lg btn-cta-glow" href="https://wa.me/5561993784630?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20viagem!" target="_blank" rel="noopener noreferrer">
+              Chamar no WhatsApp
+            </a>
+            <p class="cta-links">
+              Instagram:
+              <a href="https://www.instagram.com/viajando_com_sthefanny?igsh=MXdqYjVkMGV1NWR2dw==" target="_blank" rel="noopener noreferrer">@viajando_com_sthefanny</a>
+            </p>
+            <p class="cta-extra">
+              Grupo oficial:
+              <a href="https://chat.whatsapp.com/FhCzahZclBd5SIrZJBZsXe" target="_blank" rel="noopener noreferrer"
+                >Viajando com Sthefanny no WhatsApp</a
+              >
+            </p>
+          </div>
         </div>
       </section>
     </main>
@@ -459,6 +507,20 @@
         </div>
       </div>
     </footer>
+
+    <a
+      class="wa-fab"
+      href="https://wa.me/5561993784630?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Viajando%20com%20Sthefanny!"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Abrir conversa no WhatsApp"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
 
     <script src="./script.js"></script>
   </body>
